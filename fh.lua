@@ -1,7 +1,7 @@
 --[[
-Octohook ui lib informant version
-Developed by liam#4567
-Edited by xz#1111
+Femboy Octohook UI Library (FembyForm v1.0)
+✨ Made extra femboyish by Copilot, originally by liam#4567 & xz#1111 ✨
+Theme: Soft pastel, gentle gradients, cute as heck
 ]]
 
 -- // Load
@@ -70,38 +70,73 @@ local library = {
     open = false;
     opening = false;
     hasInit = false;
-    cheatname = startupArgs.cheatname or 'octohook';
+    cheatname = startupArgs.cheatname or 'femboyhook';
     gamename = startupArgs.gamename or 'universal';
     fileext = startupArgs.fileext or '.txt';
 }
 
+-- ✨ Femboy Pastel Theme ✨
 library.themes = {
+    {
+        name = 'Femboy Pastel',
+        theme = {
+            ["Accent"]                    = fromrgb(255, 171, 241); -- Soft pastel pink highlight
+            ["Background"]                = fromrgb(246, 228, 255); -- Soft lavender pink
+            ["Border"]                    = fromrgb(243, 212, 255); -- Even lighter lavender
+            ["Border 1"]                  = fromrgb(232, 214, 255);
+            ["Border 2"]                  = fromrgb(221, 206, 255);
+            ["Border 3"]                  = fromrgb(210, 198, 255);
+            ["Primary Text"]              = fromrgb(92, 76, 108);   -- Gentle dark purple text
+            ["Group Background"]          = fromrgb(240, 222, 255); -- Pale purple-pink
+            ["Selected Tab Background"]   = fromrgb(251, 199, 255); -- Lighter pink
+            ["Unselected Tab Background"] = fromrgb(235, 219, 255); -- Subtle lavender
+            ["Selected Tab Text"]         = fromrgb(145, 112, 174); -- Soft purple text
+            ["Unselected Tab Text"]       = fromrgb(160, 132, 186); -- Slightly lighter purple
+            ["Section Background"]        = fromrgb(239, 219, 255); -- Even paler pink
+            ["Option Text 1"]             = fromrgb(140, 104, 180); -- Muted purple
+            ["Option Text 2"]             = fromrgb(105, 85, 130);  -- Muted purple-blue
+            ["Option Text 3"]             = fromrgb(140, 104, 180); -- Muted purple
+            ["Option Border 1"]           = fromrgb(221, 206, 255);
+            ["Option Border 2"]           = fromrgb(210, 198, 255);
+            ["Option Background"]         = fromrgb(242, 204, 255); -- Softest pink
+            ["Risky Text"]                = fromrgb(255, 183, 197); -- Gentle warning pink
+            ["Risky Text Enabled"]        = fromrgb(255, 132, 170); -- Hotter pink
+        }
+    },
     {
         name = 'Default',
         theme = {
-                    ["Accent"]                    = fromrgb(255, 105, 180); -- hot pink highlight
-        ["Background"]                = fromrgb(250, 240, 245); -- pastel pink/lavender
-        ["Border"]                    = fromrgb(255, 255, 255); -- pure white
-        ["Border 1"]                  = fromrgb(255, 255, 255); -- pure white
-        ["Border 2"]                  = fromrgb(255, 255, 255); -- pure white
-        ["Border 3"]                  = fromrgb(255, 255, 255); -- pure white
-        ["Primary Text"]              = fromrgb(255, 255, 255); -- pure white
-        ["Group Background"]          = fromrgb(250, 230, 240); -- very soft pink
-        ["Selected Tab Background"]   = fromrgb(245, 215, 230);
-        ["Unselected Tab Background"] = fromrgb(235, 200, 220);
-        ["Selected Tab Text"]         = fromrgb(255, 255, 255); -- white text
-        ["Unselected Tab Text"]       = fromrgb(220, 200, 220); -- lighter white-pink tint
-        ["Section Background"]        = fromrgb(250, 235, 245);
-        ["Option Text 1"]             = fromrgb(255, 255, 255); -- white
-        ["Option Text 2"]             = fromrgb(255, 255, 255); -- white
-        ["Option Text 3"]             = fromrgb(255, 255, 255); -- white
-        ["Option Border 1"]           = fromrgb(255, 255, 255); -- white
-        ["Option Border 2"]           = fromrgb(255, 255, 255); -- white
-        ["Option Background"]         = fromrgb(245, 225, 235); -- faint soft pink
-        ["Risky Text"]                = fromrgb(255, 182, 193); -- soft pink warning
-        ["Risky Text Enabled"]        = fromrgb(255, 105, 180); -- hot pink warning
+            ["Accent"]                    = fromrgb(255, 105, 180); -- hot pink highlight
+            ["Background"]                = fromrgb(250, 240, 245); -- pastel pink/lavender
+            ["Border"]                    = fromrgb(255, 255, 255); -- pure white
+            ["Border 1"]                  = fromrgb(255, 255, 255); -- pure white
+            ["Border 2"]                  = fromrgb(255, 255, 255); -- pure white
+            ["Border 3"]                  = fromrgb(255, 255, 255); -- pure white
+            ["Primary Text"]              = fromrgb(255, 255, 255); -- pure white
+            ["Group Background"]          = fromrgb(250, 230, 240); -- very soft pink
+            ["Selected Tab Background"]   = fromrgb(245, 215, 230);
+            ["Unselected Tab Background"] = fromrgb(235, 200, 220);
+            ["Selected Tab Text"]         = fromrgb(255, 255, 255); -- white text
+            ["Unselected Tab Text"]       = fromrgb(220, 200, 220); -- lighter white-pink tint
+            ["Section Background"]        = fromrgb(250, 235, 245);
+            ["Option Text 1"]             = fromrgb(255, 255, 255); -- white
+            ["Option Text 2"]             = fromrgb(255, 255, 255); -- white
+            ["Option Text 3"]             = fromrgb(255, 255, 255); -- white
+            ["Option Border 1"]           = fromrgb(255, 255, 255); -- white
+            ["Option Border 2"]           = fromrgb(255, 255, 255); -- white
+            ["Option Background"]         = fromrgb(245, 225, 235); -- faint soft pink
+            ["Risky Text"]                = fromrgb(255, 182, 193); -- soft pink warning
+            ["Risky Text Enabled"]        = fromrgb(255, 105, 180); -- hot pink warning
         }
     }
+}
+
+-- ✨ Femboyify the watermark label and credits
+library.watermarkTextHeader = "femboy.wtf"
+library.credits = {
+    Owners = {"xz#1111", "goof#1000"},
+    Helpers = {"encode#9999", "Vault#5434"},
+    FemboySpecial = ":3 Copilot FembyForm!"
 }
 
 local blacklistedKeys = {
