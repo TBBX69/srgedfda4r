@@ -1,4 +1,17 @@
 local UILibrary = {}
+
+-- Kolory zdefiniowane jako stałe (łatwa zmiana motywu pastelowego)
+local COLORS = {
+    Primary = Color3.fromRGB(255, 105, 180), -- różowy
+    Secondary = Color3.fromRGB(255, 182, 193), -- jasny różowy
+    Accent = Color3.fromRGB(200, 162, 200), -- lawendowy
+    BackgroundDark = Color3.fromRGB(25, 25, 25),
+    BackgroundLight = Color3.fromRGB(255, 255, 255),
+    Border = Color3.fromRGB(27, 42, 53),
+    Shadow = Color3.fromRGB(0, 0, 0),
+    Text = Color3.fromRGB(100, 100, 100)
+
+
 --// Modules
 
 local function getObjGen()
@@ -286,27 +299,25 @@ local function getObjGen()
                 UIAspectRatioConstraint_17 = Instance.new("UIAspectRatioConstraint")
             }
 
-            --Properties:
-
-            Gui.UIObjects.Name = "UIObjects"
+             Gui.UIObjects.Name = "UIObjects"
 
             Gui.Cheats.Name = "Cheats"
             Gui.Cheats.Parent = Gui.UIObjects
 
             Gui.Button.Name = "Button"
             Gui.Button.Parent = Gui.Cheats
-            Gui.Button.BackgroundColor3 = Color3.fromRGB(255, 105, 180)
-            Gui.Button.BorderColor3 = Color3.fromRGB(27, 42, 53)
+            Gui.Button.BackgroundColor3 = COLORS.Primary
+            Gui.Button.BorderColor3 = COLORS.Border
             Gui.Button.BorderSizePixel = 0
             Gui.Button.Size = UDim2.new(1, 0, 1, 0)
             Gui.Button.ZIndex = 110
 
-            Gui.UICorner.CornerRadius = UDim.new(0.100000001, 0)
+            Gui.UICorner.CornerRadius = UDim.new(0.1, 0)
             Gui.UICorner.Parent = Gui.Button
 
             Gui.DropShadowHolder.Name = "DropShadowHolder"
             Gui.DropShadowHolder.Parent = Gui.Button
-            Gui.DropShadowHolder.BackgroundTransparency = 1.000
+            Gui.DropShadowHolder.BackgroundTransparency = 1.0
             Gui.DropShadowHolder.BorderSizePixel = 0
             Gui.DropShadowHolder.Size = UDim2.new(1, 0, 1, 0)
             Gui.DropShadowHolder.ZIndex = 0
@@ -314,80 +325,40 @@ local function getObjGen()
             Gui.DropShadow.Name = "DropShadow"
             Gui.DropShadow.Parent = Gui.DropShadowHolder
             Gui.DropShadow.AnchorPoint = Vector2.new(0.5, 0.5)
-            Gui.DropShadow.BackgroundTransparency = 1.000
+            Gui.DropShadow.BackgroundTransparency = 1.0
             Gui.DropShadow.BorderSizePixel = 0
             Gui.DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
             Gui.DropShadow.Size = UDim2.new(1, 34, 1, 34)
             Gui.DropShadow.ZIndex = 109
             Gui.DropShadow.Image = "rbxassetid://6014261993"
-            Gui.DropShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
-            Gui.DropShadow.ImageTransparency = 0.500
+            Gui.DropShadow.ImageColor3 = COLORS.Shadow
+            Gui.DropShadow.ImageTransparency = 0.5
             Gui.DropShadow.ScaleType = Enum.ScaleType.Slice
             Gui.DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
 
             Gui.Text.Name = "Text"
             Gui.Text.Parent = Gui.Button
             Gui.Text.AnchorPoint = Vector2.new(0.5, 0.5)
-            Gui.Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-            Gui.Text.BackgroundTransparency = 1.000
+            Gui.Text.BackgroundColor3 = COLORS.BackgroundLight
+            Gui.Text.BackgroundTransparency = 1.0
             Gui.Text.Position = UDim2.new(0.5, 0, 0.5, 0)
-            Gui.Text.Size = UDim2.new(0.899999976, 0, 0.6, 0)
+            Gui.Text.Size = UDim2.new(0.9, 0, 0.6, 0)
             Gui.Text.ZIndex = 112
             Gui.Text.Font = Enum.Font.GothamSemibold
             Gui.Text.Text = "BUTTON WITHOUT TITLE OR DESC"
-            Gui.Text.TextColor3 = Color3.fromRGB(100, 100, 100)
+            Gui.Text.TextColor3 = COLORS.Text
             Gui.Text.TextScaled = true
-            Gui.Text.TextSize = 14.000
+            Gui.Text.TextSize = 14.0
             Gui.Text.TextWrapped = true
 
             Gui.HoverFrame.Name = "HoverFrame"
             Gui.HoverFrame.Parent = Gui.Button
-            Gui.HoverFrame.BackgroundColor3 = Color3.fromRGB(255, 182, 193)
-            Gui.HoverFrame.BackgroundTransparency = 1.000
-            Gui.HoverFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+            Gui.HoverFrame.BackgroundColor3 = COLORS.Secondary
+            Gui.HoverFrame.BackgroundTransparency = 1.0
+            Gui.HoverFrame.BorderColor3 = COLORS.Border
             Gui.HoverFrame.BorderSizePixel = 0
             Gui.HoverFrame.Size = UDim2.new(1, 0, 1, 0)
             Gui.HoverFrame.ZIndex = 111
-
-            Gui.UICorner_2.CornerRadius = UDim.new(0.100000001, 0)
-            Gui.UICorner_2.Parent = Gui.HoverFrame
-
-            Gui.Checkbox.Name = "Checkbox"
-            Gui.Checkbox.Parent = Gui.Cheats
-            Gui.Checkbox.BackgroundColor3 = Color3.fromRGB(255, 105, 180)
-            Gui.Checkbox.BorderSizePixel = 0
-            Gui.Checkbox.Size = UDim2.new(0.779999971, 0, 0.779999971, 0)
-            Gui.Checkbox.ZIndex = 110
-
-            Gui.UIAspectRatioConstraint.Parent = Gui.Checkbox
-
-            Gui.Selection.Name = "Selection"
-            Gui.Selection.Parent = Gui.Checkbox
-            Gui.Selection.AnchorPoint = Vector2.new(0.5, 0.5)
-            Gui.Selection.BackgroundColor3 = Color3.fromRGB(255, 105, 180)
-            Gui.Selection.BackgroundTransparency = 1.000
-            Gui.Selection.BorderSizePixel = 0
-            Gui.Selection.Position = UDim2.new(0.5, 0, 0.5, 0)
-            Gui.Selection.ZIndex = 112
-
-            Gui.UICorner_3.CornerRadius = UDim.new(0.200000003, 0)
-            Gui.UICorner_3.Parent = Gui.Selection
-
-            Gui.UIGradient.Color =
-                ColorSequence.new {
-                ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)),
-                ColorSequenceKeypoint.new(1.00, Color3.fromRGB(158, 158, 158))
-            }
-            Gui.UIGradient.Rotation = 45
-            Gui.UIGradient.Parent = Gui.Selection
-
-            Gui.HoverFrame_2.Name = "HoverFrame"
-            Gui.HoverFrame_2.Parent = Gui.Checkbox
-            Gui.HoverFrame_2.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
-            Gui.HoverFrame_2.BackgroundTransparency = 1.000
-            Gui.HoverFrame_2.BorderSizePixel = 0
-            Gui.HoverFrame_2.Size = UDim2.new(1, 0, 1, 0)
-            Gui.HoverFrame_2.ZIndex = 111
 
             Gui.UICorner_4.CornerRadius = UDim.new(0.200000003, 0)
             Gui.UICorner_4.Parent = Gui.Checkbox
