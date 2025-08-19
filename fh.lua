@@ -448,13 +448,13 @@ end
                 menu.values[tab.tab_num][section_name][sector_name] = {}
 
                 local Border = library:create("Frame", {
-                    BackgroundColor3 = Color3.fromRGB(5, 5, 5),
+                    BackgroundColor3 = Color3.fromRGB(56, 51, 89),
                     BorderColor3 = Color3.fromRGB(30, 30, 30),
                     Size = UDim2.new(1, 0, 0, 20),
                 }, actual_side)
 
                 local Container = library:create("Frame", {
-                    BackgroundColor3 = Color3.fromRGB(10, 10, 10),
+                    BackgroundColor3 = Color3.fromRGB(56, 51, 89),
                     BorderSizePixel = 0,
                     Position = UDim2.new(0, 1, 0, 1),
                     Size = UDim2.new(1, -2, 1, -2),
