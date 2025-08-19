@@ -295,7 +295,7 @@ local function getObjGen()
 
             Gui.Button.Name = "Button"
             Gui.Button.Parent = Gui.Cheats
-            Gui.Button.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            Gui.Button.BackgroundColor3 = Color3.fromRGB(255, 105, 180)
             Gui.Button.BorderColor3 = Color3.fromRGB(27, 42, 53)
             Gui.Button.BorderSizePixel = 0
             Gui.Button.Size = UDim2.new(1, 0, 1, 0)
@@ -354,7 +354,7 @@ local function getObjGen()
 
             Gui.Checkbox.Name = "Checkbox"
             Gui.Checkbox.Parent = Gui.Cheats
-            Gui.Checkbox.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            Gui.Checkbox.BackgroundColor3 = Color3.fromRGB(255, 105, 180)
             Gui.Checkbox.BorderSizePixel = 0
             Gui.Checkbox.Size = UDim2.new(0.779999971, 0, 0.779999971, 0)
             Gui.Checkbox.ZIndex = 110
@@ -364,7 +364,7 @@ local function getObjGen()
             Gui.Selection.Name = "Selection"
             Gui.Selection.Parent = Gui.Checkbox
             Gui.Selection.AnchorPoint = Vector2.new(0.5, 0.5)
-            Gui.Selection.BackgroundColor3 = Color3.fromRGB(83, 87, 158)
+            Gui.Selection.BackgroundColor3 = Color3.fromRGB(255, 105, 180)
             Gui.Selection.BackgroundTransparency = 1.000
             Gui.Selection.BorderSizePixel = 0
             Gui.Selection.Position = UDim2.new(0.5, 0, 0.5, 0)
